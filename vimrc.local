@@ -1,0 +1,51 @@
+"Pretty colors
+colorscheme hybrid_material
+set guifont=Menlo:h12.00
+
+" Don't need Rainbow plugin
+UnBundle 'Rainbow'
+
+" Don't spell check
+set nospell
+
+" --- Go ---
+" fix imports and format on save
+let g:go_fmt_command = "goimports"
+
+" Turn on nice highlighting for all the things
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields =1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+"  -- vim-go customization --
+" Improve performance b/c Syntastic is in place (https://github.com/fatih/vim-go#using-with-syntastic)
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+" Leader-based shortcuts: General
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" Leader-based shortcuts: Documentation
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+" Leader-based shortcuts: Definition display
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+" Show interfaces the type under cursor implements
+au FileType go nmap <Leader>s <Plug>(go-implements)
+
+
+" Trigger Snipmate with Ctrl-J
+imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
