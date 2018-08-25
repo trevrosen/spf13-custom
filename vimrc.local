@@ -2,11 +2,14 @@
 colorscheme hybrid_material
 set guifont=Menlo:h12.00
 
-" Don't need Rainbow plugin
-UnBundle 'Rainbow'
-
 " Don't spell check
 set nospell
+
+" Disable Rainbow by default
+let g:rainbow_active = 0
+
+" Easy to fold things
+let foldmethod = "syntax"
 
 " --- Go ---
 " fix imports and format on save
