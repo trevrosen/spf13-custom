@@ -9,7 +9,7 @@ set nospell
 let g:rainbow_active = 0
 
 " Easy to fold things
-set foldmethod =syntax
+set foldmethod=syntax
 
 " --- Go ---
 " fix imports and format on save
@@ -54,3 +54,6 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 imap <C-j>     <Plug>(neosnippet_expand_or_jump)
 smap <C-j>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-j>     <Plug>(neosnippet_expand_target)
+
+"map <D-/> <Plug>NERDComToggleComment
+"rmap <D-/> <Plug>NERDComToggleComment
